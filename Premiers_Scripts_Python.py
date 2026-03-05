@@ -55,9 +55,4 @@ def Conversion_EuroToCfp():
     print(f"{euro} Euros équivaut à {cfp} CFP.")
 
 
-affichage()
-Entrée()
-Calcul()
-CalculFloat()
-Conversion_CfpToEuro()
-Conversion_EuroToCfp()
+
