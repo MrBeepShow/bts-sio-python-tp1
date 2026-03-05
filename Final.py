@@ -1,3 +1,10 @@
+
+#Exercice final (pour ceux qui ont tout fait) 
+    #Objectif : écrire une fonction qui : 
+        #• Demande 5 nombres à l’utilisateur 
+        #• Les stocke dans une liste 
+        #• Les trie 
+        #• Les affiche du plus petit au plus grand 
 def stockList():
     Lstock = []
     for i in range(1, 6):

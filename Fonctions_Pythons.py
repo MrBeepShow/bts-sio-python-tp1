@@ -1,12 +1,16 @@
+#Exercice 1 – Fonction sans paramètre
 def Dire_Bonjour():
     print("Bonjour BTS !")
 
+#Exercice 2 – Fonction avec paramètre
 def Saluer(nom):
     print(f"Bonjour {nom} !")
 
+#Exercice 3 – Fonction avec calcul
 def somme(a, b):
     return a + b
 
+#Exercice 4 – Fonction + saisie utilisateur
 def sommeUI():
     while True:
         try:
