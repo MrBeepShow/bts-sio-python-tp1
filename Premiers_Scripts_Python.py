@@ -38,7 +38,7 @@ print("La moyenne est : ", (a + b) / 2)
 #Conversion cfp → euros : 
 while True:
     try:
-        cfp = float(input("Montant en CFP : "))
+        cfp = int(input("Montant en CFP : "))
         break
     except ValueError:
         print("Veuillez entrer un nombre valide.")
@@ -51,5 +51,6 @@ while True:
         break
     except ValueError:
         print("Veuillez entrer un nombre valide.")
-cfp = euro * 119.33
+        
+cfp = int(euro * 119.33)
 print(f"{euro} Euros équivaut à {cfp} CFP.")
