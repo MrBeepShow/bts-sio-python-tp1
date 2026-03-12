@@ -1,25 +1,23 @@
 from hashlib import sha256
 
-def demande_age():
+def exercice_1():
+    #le Début
     while True:
         try:
             age = int(input("Quel est votre âge ? "))
             if age < 0:
                 print("L'âge ne peut pas être négatif. Veuillez réessayer.")
             else:
-                return age
+                break
         except ValueError:
-            print("Veuillez entrer un nombre entier valide pour l'âge.")
-
-
-def exercice_1():
-    age = demande_age()
+            print("Veuillez entrer un nombre entier valide pour l'âge.")            
     if age < 18:
         print("Vous êtes mineur.")
     else:
         print("Vous êtes majeur.")
 
 def exercice_2():
+    #Comparaison de nombres
     nombre = input("Entrez un nombre : ")
     while True:
         try:   
@@ -36,6 +34,7 @@ def exercice_2():
         print("Le nombre est égal à zéro.")
 
 def exercice_3():
+    #Vérification de mot de passe
     while True:
         mot_de_passe = input("Entrez un mot de passe : ")
         if len(mot_de_passe) < 8:
@@ -44,6 +43,7 @@ def exercice_3():
             break
     # Suite à un retour des étudiants de BTS SIO 2, le mot de passe correct est : R@bi3r123*%
     temoin = sha256("R@bi3r123*%".encode()).hexdigest()
+    # On compare le hash du mot de passe entré avec le hash du mot de passe correct
     if sha256(mot_de_passe.encode()).hexdigest() == temoin:
         print("Accès autorisé.")
     else:
@@ -68,8 +68,45 @@ def exercice_4():
     else:
         print("Ajourné !")
 
+def exercice_5():
+    #Pair ou impair
+    while True:
+        try:
+            nombre = int(input("Entrez un nombre entier : "))
+            break
+        except ValueError:
+            print("Veuillez entrer un nombre entier valide.")
+
+    if nombre % 2 == 0:
+        print("Le nombre est pair.")
+    else:
+        print("Le nombre est impair.")
+
+def exercice_6():
+    #Accès à une attraction
+    while True:
+        try:
+            age = int(input("Quel est votre âge ? "))
+            break
+        except ValueError:
+            print("Veuillez entrer un nombre entier valide pour l'âge.")
+
+    while True:
+        try:
+            taille = float(input("Quelle est votre taille en cm ? "))
+            break
+        except ValueError:
+            print("Veuillez entrer un nombre valide pour la taille.")
+
+    if age >= 12 and taille >= 140:
+        print("Accès Autorisé.")
+    else:
+        print("Accès Refusé.")
+
 if __name__ == "__main__":
     exercice_1()
     exercice_2()
     exercice_3()
     exercice_4()
+    exercice_5()
+    exercice_6()
