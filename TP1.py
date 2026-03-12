@@ -126,13 +126,13 @@ def tarif(age):
     
 def calculateur(nombre1, nombre2, operateur):
     #Fonction de calculatrice
-    if operateur == "+":
+    if operateur == "+" or operateur == "addition":
         return nombre1 + nombre2
-    elif operateur == "-":
+    elif operateur == "-" or operateur == "soustraction":
         return nombre1 - nombre2
-    elif operateur == "*":
+    elif operateur == "*" or operateur == "multiplication":
         return nombre1 * nombre2
-    elif operateur == "/":
+    elif operateur == "/" or operateur == "division":
         if nombre2 != 0:
             return nombre1 / nombre2
         else:
