@@ -1,3 +1,6 @@
+# Lien vers Github : https://github.com/MrBeepShow/bts-sio-python-tp1.git
+
+from ast import main
 from hashlib import sha256
 
 def exercice_1():
@@ -103,10 +106,53 @@ def exercice_6():
     else:
         print("Accès Refusé.")
 
+def est_majeur(age):
+   #Fonction de majorité        
+    if age >= 18:
+        return True
+    else:
+        return False
+
+def tarif(age):
+    #Fonction de tarif
+    if age < 12:
+        return "Enfant"
+    elif age < 18:
+        return "Adolescent"
+    elif age < 65:
+        return "Adulte"
+    else:
+        return "Senior"
+    
+def calculateur(nombre1, nombre2, operateur):
+    #Fonction de calculatrice
+    if operateur == "+":
+        return nombre1 + nombre2
+    elif operateur == "-":
+        return nombre1 - nombre2
+    elif operateur == "*":
+        return nombre1 * nombre2
+    elif operateur == "/":
+        if nombre2 != 0:
+            return nombre1 / nombre2
+        else:
+            return "Erreur : Division par zéro"
+    else:
+        return "Opération non reconnue"
+
+def connexion(login, mot_de_passe):
+    #Fonction de connexion
+    temoin_login = "root"
+    temoin_mot_de_passe = sha256("!!_Ca_C_pYthon_**".encode()).hexdigest()
+    if login == temoin_login and sha256(mot_de_passe.encode()).hexdigest() == temoin_mot_de_passe:
+        return "Connexion réussie"          
+    elif login != temoin_login and sha256(mot_de_passe.encode()).hexdigest() == temoin_mot_de_passe:
+        return "Connexion échouée : Login incorrect"
+    elif login == temoin_login and sha256(mot_de_passe.encode()).hexdigest() != temoin_mot_de_passe:
+        return "Connexion échouée : Mot de passe incorrect"
+    else:
+        return "Connexion échouée : Identifiants incorrects"
+
+
+
 if __name__ == "__main__":
-    exercice_1()
-    exercice_2()
-    exercice_3()
-    exercice_4()
-    exercice_5()
-    exercice_6()
