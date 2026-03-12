@@ -156,3 +156,9 @@ def connexion(login, mot_de_passe):
 
 
 if __name__ == "__main__":
+    exercice_1()
+    exercice_2()
+    exercice_3()
+    exercice_4()
+    exercice_5()
+    exercice_6()
